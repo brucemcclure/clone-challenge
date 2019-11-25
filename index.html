@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="image-holder">
+
+    </div>
+
+
+
+    <script>
+        // First argument is the end point
+        // Second argument is the configuration
+        axios.get('https://api.unsplash.com/search/photos', {
+            params: { query: "harry potter" },
+            headers: {
+                Authorization: 'Client-ID <your client id goes here>'
+            }
+        })
+        .then( (response) => {
+            let unsplashImages = response.data.results;
+            let container = document.getElementById("image-holder");
+            let tweets = "";
+            for(let image of unsplashImages){
+                tweets += `
+                <div>
+                    <img src="${image.urls.regular}">
+                </div>
+                `;
+            }   
+            container.innerHTML = tweets;
+        });
+
+
+    </script>
+    
+
+
+</body>
+</html>

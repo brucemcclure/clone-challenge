@@ -1,0 +1,8 @@
+{
+    "posts": [
+      { "id": 1, "name": "Hagrid", "date": "today", "body": "RIP Fluffy" },
+      { "id": 1, "name": "Harry", "date": "03-12-91", "body": "1st year of Hogwarts finished. Didnt die. #Winning" },
+      { "id": 1, "name": "Ron", "date": "01-12-91", "body": "Anyone having confusing feelings about their best friend? Asking for someone else" },
+      { "id": 1, "name": "Tom", "date": "31-11-91", "body": "#IllBeBack #SnakesRule" }
+    ]
+  }
